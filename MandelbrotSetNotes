@@ -1,0 +1,17 @@
+z0 = 1 + 0i
+z and z0 are complex #'s
+
+
+f(z) = z^2 + z0
+f(0) = 0^2 + (1 + 0i) = 1 + 0i
+f(1+0i) = (1 + 0i)^2 + (1+ 0i) = 2
+f(2+0i) = (2 + 0i)^2 + (2+ 0i) = 5
+f(5+0i) = (5 + 0i)^2 + (5+ 0i) = 26
+this "escapes"
+
+
+f(0) = 0^2 + (-1 + 0i) = -1
+f(-1) = (-1)^2 + (-1 + 0i) = 0 
+therefore f(0) = -1 and f(-1) = 0 
+alternating. does not "escape"
+
