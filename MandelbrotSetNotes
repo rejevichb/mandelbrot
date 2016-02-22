@@ -1,17 +1,77 @@
-z0 = 1 + 0i
-z and z0 are complex #'s
+The Mandelbrot Set is used to refer to a type of fractal set and, often, a specific
+instance of the set. The Mandelbrot Set plots the points, in the complex plane, such
+that the coorosponding Julia Set (the compliment of the Fatou Set) is connected and 
+not computable. A connected set is  a set that cannot be partitioned into two non-empty
+subsets so that each subset has not points in common with the set closure of the other. 
+
+We get the Mandelbrot set from the Quadratic Ocuurence Equation:
+
+Where
+Z|n = (Z|n)^2 + C
+and 
+Z|0 = C
+
+    Where Z|n denotes Z sub n, the n'th iteration of the equation, and C
+    is a member of the set, in the complex plane, for which the orbit
+    of Z|n does not grow to infinity.
+
+My Mandelbrot Set project, completed while studying AP Computer Science at Gonzaga
+College High School, graphs one instance of the Mandelbrot Set. Also defined are
+a CartesianPlane class, allowing points to be plotted on a cartesian plane, using 
+pixel coordinates, and a Complex Number class, allowing for addition, subtraction,
+multiplication, and other mathematical operations of complex numbers. 
+
+To visualize the Mandelbrot set, the limit at which points are assumed to have escaped
+can be approximated by int Max instead of infinity. In my implementation, I used int count
+to keep track of the number of iterations it took to "escape," and use count to color
+points accordingly. By "escape" I mean for Z|n > Max. 
+
+    Accordingly, the first few lemniscates are:
+
+    L|1(C) = C
+    L|2(C) = C(C + 1)
+           = C^2 + C
+    L|3(C) = C + (C + C^2)^2
+           = C^4 + (2C)^3 + C^2 + C
+    L|4(C) = C + [C + (C + C^2)^2]^2
+           = C^8 + (4C)^7 + (6C)^5 + (5C)^4 + (2C)^3 + C^2 + C
+
+When writing C = x + iy and taking the absolute square of each side, the lemninscates
+can be plotted in the complex plane, and the first are given by:
+
+      r^2 = x^2 + y^2
+     r^2 = (x^2 +  y^2)[(x + 1)^2 + y^2]
+      etc..
 
 
-f(z) = z^2 + z0
-f(0) = 0^2 + (1 + 0i) = 1 + 0i
-f(1+0i) = (1 + 0i)^2 + (1+ 0i) = 2
-f(2+0i) = (2 + 0i)^2 + (2+ 0i) = 5
-f(5+0i) = (5 + 0i)^2 + (5+ 0i) = 26
-this "escapes"
+Often, the Mandelbrot Set is generalized by replacing (Z|n)^2 with (W|n)^k, where k is 
+a positive integer and W dennotes the complex conjugate of Z. 
 
 
-f(0) = 0^2 + (-1 + 0i) = -1
-f(-1) = (-1)^2 + (-1 + 0i) = 0 
-therefore f(0) = -1 and f(-1) = 0 
-alternating. does not "escape"
+Another example:
+
+    z0 = 1 + 0i
+      Where z and z0 are complex numbers.
+
+  f(z) = z^2 + z0
+  f(0) = 0^2 + (1 + 0i) = 1 + 0i
+  f(1+0i) = (1 + 0i)^2 + (1+ 0i) = 2
+  f(2+0i) = (2 + 0i)^2 + (2+ 0i) = 5
+  f(5+0i) = (5 + 0i)^2 + (5+ 0i) = 26
+      this "escapes"
+
+
+  f(0) = 0^2 + (-1 + 0i) = -1
+  f(-1) = (-1)^2 + (-1 + 0i) = 0 
+    therefore f(0) = -1 and f(-1) = 0 
+    alternating. We notice a pattern, so
+    this does not "escape"
+
+
+
+
+Work Cited
+Croft, H. T.; Falconer, K. J.; and Guy, R. K. Unsolved Problems in Geometry. New York: Springer-Verlag, p. 2, 1991.
+Weisstein, Eric W. "Mandelbrot Set." From MathWorld--A Wolfram Web Resource.
+Alfeld, P. "The Mandelbrot Set." http://www.math.utah.edu/~alfeld/math/mandelbrot/mandelbrot.html.
 
