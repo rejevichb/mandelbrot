@@ -1,3 +1,9 @@
+Brendan Rejevich
+Northeastern University College of Computer and Information Science
+Project Completed Senior Year of HS (2014)
+
+The Mandelbrot Set
+
 The Mandelbrot Set is used to refer to a type of fractal set and, often, a specific
 instance of the set. The Mandelbrot Set plots the points, in the complex plane, such
 that the coorosponding Julia Set (the compliment of the Fatou Set) is connected and 
@@ -6,7 +12,6 @@ subsets so that each subset has not points in common with the set closure of the
 
 We get the Mandelbrot set from the Quadratic Ocuurence Equation:
 
-Where
 Z|n = (Z|n)^2 + C
 and 
 Z|0 = C
