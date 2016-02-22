@@ -12,13 +12,13 @@ subsets so that each subset has not points in common with the set closure of the
 
 We get the Mandelbrot set from the Quadratic Ocuurence Equation:
 
-Z|n = (Z|n)^2 + C
-and 
-Z|0 = C
+    Z|n = (Z|n)^2 + C
+    and 
+    Z|0 = C
 
-    Where Z|n denotes Z sub n, the n'th iteration of the equation, and C
-    is a member of the set, in the complex plane, for which the orbit
-    of Z|n does not grow to infinity.
+        Where Z|n denotes Z sub n, the n'th iteration of the equation, and C
+        is a member of the set, in the complex plane, for which the orbit
+        of Z|n does not grow to infinity.
 
 My Mandelbrot Set project, completed while studying AP Computer Science at Gonzaga
 College High School, graphs one instance of the Mandelbrot Set. Also defined are
