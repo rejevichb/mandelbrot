@@ -56,9 +56,9 @@ public class Mandelbrot extends WindowController{
   
   
   
-  // Complete. pass in cx # , z0, 
+  // pass in cx # , z0, 
   public static int dwellMandelbrot(Complex z0)
-  { //dwell. set the dwell of the distrbutor. the # of iterations it took to escape
+  { //dwell.  the # of iterations it took to escape
 	  	Complex z = new Complex(z0);
 	  	int k = 1;
 	  	while (k < MAX_ITERATIONS)
@@ -81,7 +81,7 @@ public class Mandelbrot extends WindowController{
   	
   	for (int h = 0; h < canvas.getWidth();h++)
   	{
-  		//x = 0; // fix ... based on h
+  		
   		for (int v = 0; v < canvas.getHeight();v++)
   		{
   			Location loc = new Location (h,v);
@@ -115,9 +115,6 @@ public class Mandelbrot extends WindowController{
   
   public void onMouseClick(Location point) {
   		canvas.clear();
-  		// implement zoom in your CartesianPlane class.  zoom divides dx and dy by 2, 
-  		// and recenters the plane at the point where the mouse was clicked.
-        // p.zoom(point.getX(),point.getY());
   		p.zoom(point.getX(), point.getY());
   		drawMandelbrotSet();
   
